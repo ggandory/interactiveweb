@@ -52,35 +52,10 @@
     </div>
 
     <script>
-        (function ilbun() {
-            const ilbuni = document.querySelectorAll('.ilbuni');
-            ilbuni.forEach((e) => {
-                e.addEventListener('click', function () {
-                    e.classList.toggle('special');
-                });
-            });
-        })();
-        /*{
-        const ilbuni = document.querySelectorAll('.ilbuni');
-            ilbuni.forEach((e) => {
-                e.addEventListener('click', function () {
-                    e.classList.toggle('special');
-                });
-            });
-        } 그냥 이렇게 중괄호로 감싸도 된다고 하네   
-        */
-        /*
-        만약 head부분에 자바스크립트 쓸려면 밑에 윈도우 먼저 로드해주는 스크립트 사용해야함(없으면 스크립트 작동안함)
-        window.addEventListener('load', function(){
-        });
-        load대신에 DOMContentLoded로 써도 됨(이건 html body를 불러오는거임)
-        */
-        /*
-        const ilbuni = document.qeurySelector('.ilbuni:nth-child(3)');
-        ilbuni.addEventListener('click',function(){
+        const ilbuni = document.querySelector('.ilbuni');
+        ilbuni.addEventListener('click', function () {
             ilbuni.classList.add('special');
-        })
-        */
+        });
     </script>
 </body>
 

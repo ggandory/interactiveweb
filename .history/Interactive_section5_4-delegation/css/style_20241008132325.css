@@ -1,7 +1,5 @@
 .stage {
-  /*vw, vh는 브라우저 폭, 높이
-  height에다가 vw써도 됨 예를들어
-  너비 높이 둘다 vw를 주면 가로 세로 비율을 정해줄 수 있긴함*/
+  /*vw, vh는 브라우저 폭, 높이*/
   overflow: hidden;
   position: relative;
   width: 100vw;
@@ -26,20 +24,20 @@
   animation: moving infinite alternate;
 }
 .ilbuni.a {
-  left: 0;
-  bottom: 50%;
+  left: 5%;
+  bottom: 5%;
   background-image: url("../images/ilbuni_0.png");
-  animation-duration: 1s;
-}
-.ilbuni.b {
-  left: 0%;
-  bottom: 70%;
-  background-image: url("../images/ilbuni_1.png");
   animation-duration: 2s;
 }
+.ilbuni.b {
+  left: 10%;
+  bottom: 3%;
+  background-image: url("../images/ilbuni_1.png");
+  animation-duration: 3s;
+}
 .ilbuni.c {
-  left: 0%;
-  bottom: 30%;
+  left: 7%;
+  bottom: 10%;
   background-image: url("../images/ilbuni_2.png");
-  animation-duration: 2.5s;
+  animation-duration: 4s;
 }

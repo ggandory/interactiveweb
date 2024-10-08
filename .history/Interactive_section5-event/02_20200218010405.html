@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,17 +14,14 @@
             height: 75vw;
             background: #fff000;
         }
-
         @keyframes moving {
             from {
                 transform: translateX(0);
             }
-
             to {
                 transform: translateX(90vw);
             }
         }
-
         .ilbuni {
             position: absolute;
             width: 100px;
@@ -35,21 +31,18 @@
             background-size: contain;
             animation: moving infinite alternate;
         }
-
         .ilbuni.a {
             left: 5%;
             bottom: 5%;
             background-image: url('images/ilbuni_0.png');
             animation-duration: 2s;
         }
-
         .ilbuni.b {
             left: 10%;
             bottom: 3%;
             background-image: url('images/ilbuni_1.png');
             animation-duration: 3s;
         }
-
         .ilbuni.c {
             left: 7%;
             bottom: 10%;
@@ -57,11 +50,7 @@
             animation-duration: 4s;
         }
     </style>
-    <!-- <script defer src="sss"></script> 이렇게 처리하면 dom 로드 다 하고 스크립트 불러옴
-     그러나 async를 쓰게 되면 html을 다 불러온 상태는 아니여서 조심해야함 그래서 defer를 쓰는걸 추천
-    -->
 </head>
-
 <body>
     <div class="stage">
         <div class="ilbuni a"></div>
@@ -73,5 +62,4 @@
         // 직접 타이핑 해보세요
     </script>
 </body>
-
 </html>

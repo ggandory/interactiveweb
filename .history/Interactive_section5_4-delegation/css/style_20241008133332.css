@@ -29,17 +29,17 @@
   left: 0;
   bottom: 50%;
   background-image: url("../images/ilbuni_0.png");
-  animation-duration: 1s;
+  animation-duration: 1.5s;
 }
 .ilbuni.b {
   left: 0%;
   bottom: 70%;
   background-image: url("../images/ilbuni_1.png");
-  animation-duration: 2s;
+  animation-duration: 2.5s;
 }
 .ilbuni.c {
   left: 0%;
   bottom: 30%;
   background-image: url("../images/ilbuni_2.png");
-  animation-duration: 2.5s;
+  animation-duration: 3s;
 }

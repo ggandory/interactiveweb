@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,7 +8,6 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
     <div class="stage">
         <div class="ilbuni a"></div>
@@ -18,19 +16,18 @@
     </div>
 
     <script>
-        (function () {
-            // 이벤트 위임
-            const stage = document.querySelector('.stage');
+    (function() {
+        // 이벤트 위임
+        const stage = document.querySelector('.stage');
 
-            function clickHandler(e) {
-                if (e.target.classList.contains('ilbuni')) {
-                    stage.removeChild(e.target);
-                }
+        function clickHandler(e) {
+            if (e.target.classList.contains('ilbuni')) {
+                stage.removeChild(e.target);
             }
+        }
 
-            stage.addEventListener('click', clickHandler);
-        })();
+        stage.addEventListener('click', clickHandler);
+    })();
     </script>
 </body>
-
 </html>

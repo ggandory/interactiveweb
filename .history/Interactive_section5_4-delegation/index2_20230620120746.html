@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,7 +15,6 @@
     } */
   </style>
 </head>
-
 <body>
   <div class="elem1" data-id="about">
     <div class="elem2">
@@ -28,9 +26,8 @@
     const elem1 = document.querySelector('.elem1');
     elem1.addEventListener('click', e => {
       // console.log(e.target.dataset.id);
-      console.log(e.target.closest('.elem1'));
+      console.log( e.target.closest('.elem1') );
     });
   </script>
 </body>
-
 </html>

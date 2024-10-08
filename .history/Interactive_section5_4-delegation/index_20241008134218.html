@@ -22,9 +22,9 @@
             // 이벤트 위임
             const stage = document.querySelector('.stage');
 
-            function clickHandler(e) {
-                if (e.target.classList.contains('ilbuni')) {
-                    stage.removeChild(e.target);
+            function clickHandler() {
+                if (this.classList.contains('ilbuni')) {
+                    stage.removeChild(this);
                 }
             }
 
