@@ -44,11 +44,11 @@
         window.addEventListener('click', function (e) {
             ballElem.style.animation = 'ball-ani 1s 3 alternate forwards';
         });
-        //애니메이션 관련해서 시작할때와 끝날 때 시점으로 속성을 줄 때
+
         ballElem.addEventListener('animationend', function (e) {
             ballElem.classList.add('end');
         });
-        //animationiteration은 반복이 될 때마다 수행되는 속성임
+
         ballElem.addEventListener('animationiteration', function (e) {
             console.log('반복!');
         });

@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,7 +11,6 @@
 		}
 	</style>
 </head>
-
 <body>
 	<button class="btn">취소</button>
 
@@ -24,12 +22,11 @@
 			console.log('sample!');
 		}
 
-		timeId = setInterval(sample, 1000); //setInterval은 반복시켜버리는거임
+		timeId = setInterval(sample, 1000/60);
 
 		btn.addEventListener('click', function () {
-			clearInterval(timeId); //멈춰버리게 할 수 있음 버튼으로
+			clearInterval(timeId);
 		});
 	</script>
 </body>
-
 </html>

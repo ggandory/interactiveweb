@@ -11,9 +11,10 @@
         }
 
         .content {
+            /* viewport height */
             height: 1000vh;
             padding: 20%;
-            background: yellowgreen;
+            background: green;
         }
 
         .output {
@@ -36,11 +37,19 @@
         .ilbuni.zoom {
             transform: scale(2);
         }
+
+        .loading {
+            animation: loading 3s infinite ease;
+        }
+
+        @keyframes loading {
+            0% {}
+        }
     </style>
 </head>
 
 <body>
-    <div class="output"></div>
+    <div class="output">output</div>
     <div class="content">
         <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo culpa id ratione alias illum aliquam
@@ -55,30 +64,35 @@
         <figure class="ilbuni">
             <img src="images/ilbuni_0.png" alt="일분이">
         </figure>
+        <div class="loading">loading....</div>
     </div>
 
     <script>
-        const outputElem = document.querySelector('.output');
-        const ilbuniElem = document.querySelector('.ilbuni');
+        (function () {
+            const outputElem = document.querySelector('.output');
+            const ilbuniElem = document.querySelector('.ilbuni');
+            let num = 0;
 
-        function showValues() {
-            outputElem.innerHTML = '' +
-                '스크롤 된 양: <strong>'
-                // + window.pageYOffset 이제 이거는 안씀 scrollY를 씀
-                +
-                window.scrollY +
-                '</strong> / offsetTop: <strong>' +
-                ilbuniElem.offsetTop +
-                '</strong> / getBoundingClientRect(): <strong>' +
-                ilbuniElem.getBoundingClientRect().top +
-                '</strong>'
-        }
+            function showValue() {
+                // outputElem.innerHTML = window.pageYOffset;
+                // outputElem.innerHTML = ilbuniElem.offsetTop;
+                let posY = ilbuniElem.getBoundingClientRect().top;
+                outputElem.innerHTML = posY;
 
-        document.addEventListener('scroll', function () {
-            showValues();
-        });
+                if (posY < window.innerHeight * 0.2) {
+                    ilbuniElem.classList.add('zoom');
+                } else {
+                    ilbuniElem.classList.remove('zoom');
+                }
+            }
 
-        showValues();
+            window.addEventListener('scroll', function () {
+                showValue();
+            });
+
+            showValue();
+
+        })();
     </script>
 </body>
 
